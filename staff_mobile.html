@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -100,7 +101,6 @@
     }
     .danger .summary-value,.danger .summary-label{color:var(--danger)}
     .ok .summary-value,.ok .summary-label{color:var(--ok)}
-
     .toolbar{
       display:flex;
       gap:8px;
@@ -139,7 +139,6 @@
       font-weight:800;
       color:var(--text);
     }
-
     .section-head{
       display:flex;
       align-items:center;
@@ -157,7 +156,6 @@
       color:var(--sub);
       margin:0;
     }
-
     .calendar-grid{
       display:grid;
       grid-template-columns:repeat(7,1fr);
@@ -218,7 +216,6 @@
       line-height:1;
       font-weight:700;
     }
-
     .day-header{
       padding:16px;
     }
@@ -242,7 +239,6 @@
       font-size:12px;
       font-weight:700;
     }
-
     .job-card{
       padding:14px;
       margin-bottom:12px;
@@ -303,7 +299,6 @@
       color:var(--ok);
       border-color:#bfe1cb;
     }
-
     .info-list{
       display:grid;
       gap:8px;
@@ -336,7 +331,6 @@
       color:#195cc1;
       text-decoration:underline;
     }
-
     .action-row{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -359,7 +353,6 @@
       background:#f0e4ce;
       color:#6c4e18;
     }
-
     .empty{
       padding:24px 14px;
       text-align:center;
@@ -368,7 +361,6 @@
       border:1px dashed var(--line);
       border-radius:16px;
     }
-
     .loading,.error-box{
       padding:14px;
       border-radius:14px;
@@ -387,7 +379,6 @@
       white-space:pre-wrap;
       line-height:1.6;
     }
-
     @media (max-width:480px){
       .title{font-size:20px}
       .summary-value{font-size:20px}
@@ -462,7 +453,7 @@
   </div>
 
   <script>
-    const API_URL = "https://script.google.com/macros/s/AKfycbxHYUo86-Qp7eYlhYUoykKDaqKPAWvWdDSqFQonSpH1v5cS6owz2MNNPcrZgkRL_sRo/exec";
+    const API_URL = "https://script.google.com/macros/s/AKfycbx_G2RwPFC6xgjcdQBgDpqjnuWF0c11S7I1W1u-I8n6C7HoJbvLqKOBpIRIMaLnQgZZ/exec";
     const WEEKDAYS = ["日","月","火","水","木","金","土"];
 
     const state = {
@@ -862,7 +853,7 @@
     }
 
     async function fetchApi(){
-      const res = await fetch(API_URL + "?t=" + Date.now(), { method:"GET", cache:"no-store" });
+      const res = await fetch(API_URL + "?t=" + Date.now(), { method:"GET" });
       if(!res.ok){
         throw new Error(`API取得失敗: ${res.status} ${res.statusText}`);
       }
